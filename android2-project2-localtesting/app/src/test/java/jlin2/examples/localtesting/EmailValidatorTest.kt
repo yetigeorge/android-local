@@ -12,4 +12,8 @@ class EmailValidatorTest {
     fun emailValidator_CorrectEmailSubDomain_ReturnsTrue() {
         assertTrue(EmailValidator.isValidEmail("123@abc.co.ca"))
     }
+    @Test
+    fun emailValidator_InvalidEmailNoTld_ReturnsFalse() {
+        assertFalse(EmailValidator.isValidEmail("123@abc"))
+    }
 }
