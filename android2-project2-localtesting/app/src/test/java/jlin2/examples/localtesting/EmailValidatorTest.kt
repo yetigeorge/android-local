@@ -8,5 +8,8 @@ class EmailValidatorTest {
     fun emailValidator_CorrectEmailSimple_ReturnsTrue() {
         assertTrue(EmailValidator.isValidEmail("123@abc.com"))
     }
-
+    @Test
+    fun emailValidator_CorrectEmailSubDomain_ReturnsTrue() {
+        assertTrue(EmailValidator.isValidEmail("123@abc.co.ca"))
+    }
 }
