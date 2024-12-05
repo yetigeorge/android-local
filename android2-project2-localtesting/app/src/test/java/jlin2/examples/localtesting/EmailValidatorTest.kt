@@ -16,4 +16,8 @@ class EmailValidatorTest {
     fun emailValidator_InvalidEmailNoTld_ReturnsFalse() {
         assertFalse(EmailValidator.isValidEmail("123@abc"))
     }
+    @Test
+    fun emailValidator_InvalidEmailDoubleDot_ReturnsFalse() {
+        assertFalse(EmailValidator.isValidEmail("123@abc..com"))
+    }
 }
